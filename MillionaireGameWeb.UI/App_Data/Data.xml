@@ -1,0 +1,93 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Questions>
+  <Question Id="1" Price="100" Description="Which of these applies to the shape of a soccer ball?" CorrectAnswerIndex="2">
+    <Answer>Conical</Answer>
+    <Answer>Cylindrical</Answer>
+    <Answer>Spherical</Answer>
+    <Answer>Oval</Answer>
+  </Question>
+  <Question Id="2" Price="200" Description="Germania was the Roman name for which modern-day European country?" CorrectAnswerIndex="2">
+    <Answer>France</Answer>
+    <Answer>Austria</Answer>
+    <Answer>Germany</Answer>
+    <Answer>Spain</Answer>
+  </Question>
+  <Question Id="3" Price="300" Description="Which word goes before 'States of America' to give the name of a country?" CorrectAnswerIndex="2">
+    <Answer>Joined</Answer>
+    <Answer>Agreed</Answer>
+    <Answer>United</Answer>
+    <Answer>Unified</Answer>
+  </Question>
+  <Question Id="4" Price="500" Description="Which is not a type of antelope?" CorrectAnswerIndex="0">
+    <Answer>Gorilla</Answer>
+    <Answer>Gerenuk</Answer>
+    <Answer>Gemsbok</Answer>
+    <Answer>Gnu</Answer>
+  </Question>
+  <Question Id="5" Price="1000" Description="On which of these might you win a large amount of money?" CorrectAnswerIndex="1">
+    <Answer>National Flattery</Answer>
+    <Answer>National Lottery</Answer>
+    <Answer>National Battery</Answer>
+    <Answer>National Pottery</Answer>
+  </Question>
+  <Question Id="6" Price="2000" Description="Which activity would you most associate with a mole?" CorrectAnswerIndex="0">
+    <Answer>Burrowing</Answer>
+    <Answer>Climbing</Answer>
+    <Answer>Swimming</Answer>
+    <Answer>Flying</Answer>
+  </Question>
+  <Question Id="7" Price="4000" Description="Which of these geographical features is a mountain?" CorrectAnswerIndex="0">
+    <Answer>Kilimanjaro</Answer>
+    <Answer>Danube</Answer>
+    <Answer>Amazon</Answer>
+    <Answer>Nile</Answer>
+  </Question>
+  <Question Id="8" Price="8000" Description="Which of these is a person who performs tricks that deceive the eye?" CorrectAnswerIndex="3">
+    <Answer>Illustrator</Answer>
+    <Answer>Illuminator</Answer>
+    <Answer>Illiterate</Answer>
+    <Answer>Illusionist</Answer>
+  </Question>
+  <Question Id="9" Price="16000" Description="Which of these is a popular form of music?" CorrectAnswerIndex="3">
+    <Answer>County and Eastern</Answer>
+    <Answer>Kingdom and Northern</Answer>
+    <Answer>Land and Southern</Answer>
+    <Answer>Country and Western</Answer>
+  </Question>
+  <Question Id="10" Price="32000" Description="A 'cuppa' is an informal term for what?" CorrectAnswerIndex="1">
+    <Answer>Policeman</Answer>
+    <Answer>Cup of tea</Answer>
+    <Answer>2p coin</Answer>
+    <Answer>Smoked herring</Answer>
+  </Question>
+  <Question Id="11" Price="64000" Description="What is the meaning of the colloquial expression 'in the bag'?" CorrectAnswerIndex="0">
+    <Answer>Almost certain</Answer>
+    <Answer>Newly bought</Answer>
+    <Answer>Freshly cooked</Answer>
+    <Answer>Recently stolen</Answer>
+  </Question>
+  <Question Id="12" Price="125000" Description="Which of these means displaying advertising posters in an unauthorised place?" CorrectAnswerIndex="2">
+    <Answer>Ant-posting</Answer>
+    <Answer>Bee-posting</Answer>
+    <Answer>Fly-posting</Answer>
+    <Answer>Wasp-posting</Answer>
+  </Question>
+  <Question Id="13" Price="250000" Description="Harrison Ford announced in August 2003, that he would make a fourth film playing which role?" CorrectAnswerIndex="2">
+    <Answer>Nevada Morgan</Answer>
+    <Answer>Wyoming Williams</Answer>
+    <Answer>Indiana Jones</Answer>
+    <Answer>Montana Evans</Answer>
+  </Question>
+  <Question Id="14" Price="500000" Description="What is the name of the instrument panel in a car?" CorrectAnswerIndex="3">
+    <Answer>Chargeboard</Answer>
+    <Answer>Sprintboard</Answer>    
+    <Answer>Jogboard</Answer>
+    <Answer>Dashboard</Answer>
+  </Question>
+  <Question Id="15" Price="1000000" Description="Which of the following words for a coat also describes the paper cover of a book?" CorrectAnswerIndex="2">
+    <Answer>Cagoule</Answer>
+    <Answer>Mackintosh</Answer>
+    <Answer>Jacket</Answer>
+    <Answer>Parka</Answer>
+  </Question>
+</Questions>

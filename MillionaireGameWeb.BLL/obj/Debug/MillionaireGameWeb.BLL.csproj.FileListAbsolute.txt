@@ -1,0 +1,11 @@
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.BLL\bin\Debug\MillionaireGameWeb.BLL.dll
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.BLL\bin\Debug\MillionaireGameWeb.BLL.pdb
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.BLL\obj\Debug\MillionaireGameWeb.BLL.dll
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.BLL\obj\Debug\MillionaireGameWeb.BLL.pdb
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.BLL\obj\Debug\MillionaireGameWeb.BLL.csprojResolveAssemblyReference.cache
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.BLL\bin\Debug\MillionaireGameWeb.Entities.dll
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.BLL\bin\Debug\MillionaireGameWeb.Entities.pdb
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.BLL\bin\Debug\MillionaireGameWeb.Repositories.dll
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.BLL\bin\Debug\MillionaireGameWeb.Repositories.pdb
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.BLL\bin\Debug\Ninject.dll
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.BLL\bin\Debug\Ninject.xml

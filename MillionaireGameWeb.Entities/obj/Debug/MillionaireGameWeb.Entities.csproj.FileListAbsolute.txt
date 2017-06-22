@@ -1,0 +1,5 @@
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\bin\Debug\MillionaireGameWeb.Entities.dll
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\bin\Debug\MillionaireGameWeb.Entities.pdb
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\obj\Debug\MillionaireGameWeb.Entities.dll
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\obj\Debug\MillionaireGameWeb.Entities.pdb
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\obj\Debug\MillionaireGameWeb.Entities.csprojResolveAssemblyReference.cache

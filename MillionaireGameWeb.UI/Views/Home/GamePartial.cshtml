@@ -1,0 +1,111 @@
+﻿<section class="section">    
+    @if (ViewBag.GameOver == true)
+    {
+        <span>gameover</span>
+    }
+    <div class="row">
+        <div class="col s12 m8">
+            
+            @if (TempData["Result"] != null)
+            {
+                <div class="center">
+                    <div class="card-panel amber">Game Over <br/> Result: <b>$@TempData["Result"]</b></div>
+                </div>
+            }
+            <div class="center">
+                <img src="~/Content/Images/Logo.png" class="responsive-img" style="width:50%" />               
+            </div>
+            <div class="row">
+                <div class="col s12" style="padding:5px">
+                    <div class="card-panel indigo lighten-4" style="margin:0px">@ViewBag.Description</div>
+                </div>
+            </div>
+            <div class="row">
+                @for (int i = 0; i < ViewBag.Answers.Count; i++)
+                {
+                    <div class="col s12 l6" style="padding:5px">
+                        @if (TempData["Result"] != null)
+                        {
+                            <button type="button" class="btn indigo" style="width:100%">@ViewBag.Answers[i]</button>
+                        }
+                        else
+                        {
+                            if (TempData["HiddenAnswers"] != null && ((bool[])TempData["HiddenAnswers"])[i] == true)
+                            {
+                                <button type="button" class="btn indigo waves-effect waves-light" style="width:100%;visibility:hidden" onclick="answer(@i)">@ViewBag.Answers[i]</button>
+                            }
+                            else
+                            {
+                                <button type="button" class="btn indigo waves-effect waves-light" style="width:100%" onclick="answer(@i)">@ViewBag.Answers[i]</button>
+                            }
+                        }
+                    </div>                   
+                }
+            </div>
+        </div>
+        <div class="col s12 m4">
+            <input type="text" id="EmailFrom" placeholder="Your email"/>
+            <input type="text" id="EmailTo" placeholder="Friend's email"/>
+            <div class="row">
+                <div class="col s4 center">
+                    @if (Session["50/50Used"] == null)
+                    {
+                        <button onclick="use50_50('@ViewBag.Description')" class="btn btn-large btn-floating indigo waves-effect waves-light" style="padding:5px"><img src="~/Content/Images/50.png" class="responsive-img"></button>
+                    }
+                    else
+                    {
+                        <button class="disabled btn btn-large btn-floating indigo" style="padding:5px"><img src="~/Content/Images/50.png" class="responsive-img"></button>
+                    }
+                </div>
+                <div class="col s4 center">
+                    @if (Session["PhoneUsed"] == null)
+                    {
+                        <button onclick="usePhone($('EmailFrom').val(),$('EmailTo').val(),'@ViewBag.Description')" class="btn btn-large btn-floating indigo waves-effect waves-light" style="padding:5px"><img src="~/Content/Images/phone.png" class="responsive-img"></button>
+                    }
+                    else
+                    {
+                        <button class="disabled btn btn-large btn-floating indigo" style="padding:5px"><img src="~/Content/Images/phone.png" class="responsive-img"></button>
+                    }
+                </div>                          
+                <div class="col s4 center">
+                    @if (Session["PeopleUsed"] == null)
+                    {
+                        
+                        <button onclick="usePeople('@ViewBag.Description')" class="btn btn-large btn-floating indigo waves-effect waves-light" style="padding:5px"><img src="~/Content/Images/people.png" class="responsive-img"></button>
+                    }
+                    else
+                    {
+                        <button  class="disabled btn btn-large btn-floating indigo" style="padding:5px"><img src="~/Content/Images/people.png" class="responsive-img"></button>
+                    }
+                </div>                
+            </div>
+            <div class="collection">
+                @for ( int i=0;i< ViewBag.Prices.Count;i++)
+                {
+                    if (ViewBag.QuestionIndex == i)
+                    {
+                        if (i == 11 || i == 4 || i == 8)
+                        {
+                            <a  class="collection-item amber-text active">$@ViewBag.Prices[i]</a>
+                        }
+                        else
+                        {
+                            <a class="collection-item white-text active">$@ViewBag.Prices[i]</a>
+                        }
+                    }
+                    else
+                    {
+                        if (i == 12 || i == 4 || i == 8)
+                        {
+                            <a class="collection-item amber-text">$@ViewBag.Prices[i]</a>
+                        }
+                        else
+                        {
+                            <a class="collection-item black-text">$@ViewBag.Prices[i]</a>
+                        }
+                    }
+                }
+            </div>
+        </div>
+    </div>
+</section>

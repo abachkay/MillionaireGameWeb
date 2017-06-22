@@ -1,0 +1,7 @@
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Repositories\obj\Debug\MillionaireGameWeb.Repositories.csprojResolveAssemblyReference.cache
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Repositories\bin\Debug\MillionaireGameWeb.Repositories.dll
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Repositories\bin\Debug\MillionaireGameWeb.Repositories.pdb
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Repositories\bin\Debug\MillionaireGameWeb.Entities.dll
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Repositories\bin\Debug\MillionaireGameWeb.Entities.pdb
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Repositories\obj\Debug\MillionaireGameWeb.Repositories.dll
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Repositories\obj\Debug\MillionaireGameWeb.Repositories.pdb
