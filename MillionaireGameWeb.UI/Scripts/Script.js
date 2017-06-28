@@ -32,15 +32,27 @@ function use50_50(description) {
     });
 }
 
-function usePhone(from,to,description) {
-    $.ajax({
-        type: "POST",
-        url: '/Home/UsePhone',
-        data: { from: from, to:to, description: description },
-        success: function (result) {
-            $('#GameContainer').html(result);
-        },
-    });
+function showModal()
+{    
+    $('#modalEmail').openModal();    
+}
+
+function usePhone(to, description) {
+    var emailTemplate = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    if (emailTemplate.test($('#email').val())) {         
+        $("#modalEmail").closeModal();
+        $.ajax({
+            type: "POST",
+            url: '/Home/UsePhone',
+            data: { to: to, description: description },
+            success: function (result) {
+                $('#GameContainer').html(result);                
+                Materialize.toast('Done.', 4000)
+            },
+        });        
+    } else {
+        $('#emailError').text('Email is invalid.');
+    }    
 }
 
 function usePeople(description) {

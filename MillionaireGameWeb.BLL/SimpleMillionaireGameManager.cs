@@ -107,14 +107,24 @@ namespace MillionaireGameWeb.BLL
             }
         }
 
-        public void SendMessage(string from,string to,string description)
-        {                                   
-            MailMessage message = new MailMessage(from, to);
-            message.Subject = "Millionaire game";
-            message.Body = $"Your friend is playing millionaire game, help him with question:\n{description}";
-            SmtpClient client = new SmtpClient("smtp.gmail.com", 587);                
-            client.UseDefaultCredentials = true;
-            client.Send(message);                      
+        public void SendMessage(string to,string description)
+        {
+            try
+            {
+                var from = "abachkayspare@gmail.com";
+                MailMessage message = new MailMessage(from, to);
+                message.Subject = "Millionaire game";
+                message.Body = $"Your friend is playing millionaire game, help him with question:\n{description}";
+                SmtpClient client = new SmtpClient("smtp.gmail.com", 587);
+                client.EnableSsl = true;
+                client.UseDefaultCredentials = false;
+                client.Credentials = new System.Net.NetworkCredential("abachkayspare@gmail.com", "abachkay142");
+                client.Send(message);
+            }
+            catch
+            {
+                throw;
+            }
         }
     }
 }

@@ -14,7 +14,6 @@ namespace MillionaireGameWeb.UI.Controllers
 {       
     public class HomeController : Controller
     {
-
         private IMillionaireGameManager _gameManager;
         public HomeController()
         {            
@@ -74,8 +73,18 @@ namespace MillionaireGameWeb.UI.Controllers
             else
             {
                 TempData["Result"] = _gameManager.GetResult(Convert.ToInt32(Session["QuestionIndex"]), answerIndex);
+                return RedirectToAction("Result");
             }
             return RedirectToAction("GetGameElements");
+        }
+        public ActionResult Result()
+        {
+            Session["Name"] = null;
+            Session["QuestionIndex"] = null;
+            Session["50/50Used"] = null;
+            Session["PhoneUsed"] = null;
+            Session["PeopleUsed"] = null;
+            return PartialView("ResultPartial");
         }
         public ActionResult Use50_50()
         {
@@ -85,16 +94,29 @@ namespace MillionaireGameWeb.UI.Controllers
             Session["50/50Used"] = true;
             return RedirectToAction("GetGameElements");
         }
-        public ActionResult UsePhone(string from, string to, string description)
+        public ActionResult UsePhone(string to, string description)
         {
-            _gameManager.SendMessage(from, to, description);
-            Session["PhoneUsed"] = true;
-            return RedirectToAction("GetGameElements");
+            try
+            {
+                _gameManager.SendMessage(to, description);
+                Session["PhoneUsed"] = true;
+                return RedirectToAction("GetGameElements");
+            }
+            catch
+            {
+                ViewBag.ErrorCode = "404. Bad Request.";
+                ViewBag.ErrorMessage = "Connection problems or email is invalid.";
+                return PartialView("ErrorPartial");
+            }
         }
         public ActionResult UsePeople()
         {
             Session["PeopleUsed"] = true;
             return RedirectToAction("GetGameElements");
+        }
+        public ActionResult Error()
+        {
+            return View();
         }
     }
 }

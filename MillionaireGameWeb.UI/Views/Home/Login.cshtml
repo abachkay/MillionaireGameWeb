@@ -6,7 +6,7 @@
 {
     <div class="row">
         <div class="input-field col s12 m6 l4 offset-m3 offset-l4">
-            @Html.TextBox("name", null, new { id = "name" })
+            @Html.TextBox("name", null, new { @id = "name", @required = "required" })
             <label for="name">Name</label>
         </div>
     </div>

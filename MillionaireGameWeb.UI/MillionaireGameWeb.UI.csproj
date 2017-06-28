@@ -179,6 +179,8 @@
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Scripts\jquery-2.1.1.min.map" />
     <Content Include="Views\Home\GamePartial.cshtml" />
+    <Content Include="Views\Home\ResultPartial.cshtml" />
+    <Content Include="Views\Home\ErrorPartial.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

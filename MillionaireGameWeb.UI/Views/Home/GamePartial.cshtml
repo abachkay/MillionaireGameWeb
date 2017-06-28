@@ -2,16 +2,10 @@
     @if (ViewBag.GameOver == true)
     {
         <span>gameover</span>
-    }
+    }    
+
     <div class="row">
-        <div class="col s12 m8">
-            
-            @if (TempData["Result"] != null)
-            {
-                <div class="center">
-                    <div class="card-panel amber">Game Over <br/> Result: <b>$@TempData["Result"]</b></div>
-                </div>
-            }
+        <div class="col s12 m8">                  
             <div class="center">
                 <img src="~/Content/Images/Logo.png" class="responsive-img" style="width:50%" />               
             </div>
@@ -43,9 +37,7 @@
                 }
             </div>
         </div>
-        <div class="col s12 m4">
-            <input type="text" id="EmailFrom" placeholder="Your email"/>
-            <input type="text" id="EmailTo" placeholder="Friend's email"/>
+        <div class="col s12 m4">            
             <div class="row">
                 <div class="col s4 center">
                     @if (Session["50/50Used"] == null)
@@ -60,7 +52,7 @@
                 <div class="col s4 center">
                     @if (Session["PhoneUsed"] == null)
                     {
-                        <button onclick="usePhone($('EmailFrom').val(),$('EmailTo').val(),'@ViewBag.Description')" class="btn btn-large btn-floating indigo waves-effect waves-light" style="padding:5px"><img src="~/Content/Images/phone.png" class="responsive-img"></button>
+                        <button onclick="showModal()" class="btn btn-large btn-floating indigo waves-effect waves-light" style="padding:5px"><img src="~/Content/Images/phone.png" class="responsive-img"></button>
                     }
                     else
                     {
@@ -109,3 +101,15 @@
         </div>
     </div>
 </section>
+<div id="modalEmail" class="modal">
+    <div class="modal-content">
+        <div class="input-field">
+            <label for="email">Email</label>
+            <input type="email" id="email" />            
+        </div>
+        <span id="emailError" style="color:red"></span>
+    </div>
+    <div class="modal-footer">
+        <button onclick="usePhone($('#email').val(),'@ViewBag.Description')" class="modal-action btn amber accent-4">Send</button>
+    </div>
+</div>
