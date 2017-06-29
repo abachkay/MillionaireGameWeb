@@ -13,7 +13,7 @@ namespace MillionaireGameWeb.Entities.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "201706290012384_Initial"; }
+            get { return "201706290022484_Initial"; }
         }
         
         string IMigrationMetadata.Source

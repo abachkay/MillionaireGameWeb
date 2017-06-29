@@ -18,10 +18,23 @@ namespace MillionaireGameWeb.Entities.Migrations
                     })
                 .PrimaryKey(t => t.Id);
             
+            CreateTable(
+                "dbo.UserAnswerLogs",
+                c => new
+                    {
+                        Id = c.Int(nullable: false, identity: true),
+                        QuestionNumber = c.Int(nullable: false),
+                        FirstAnswerCount = c.Int(nullable: false),
+                        SecondAnswerCount = c.Int(nullable: false),
+                        ThirdAnswerCount = c.Int(nullable: false),
+                        FourthAnswerCount = c.Int(nullable: false),
+                    })
+                .PrimaryKey(t => t.Id);            
         }
         
         public override void Down()
         {
+            DropTable("dbo.UserAnswerLogs");
             DropTable("dbo.ExceptionLogs");
         }
     }

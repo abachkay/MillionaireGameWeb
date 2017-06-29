@@ -41,6 +41,34 @@ namespace MillionaireGameWeb.BLL
 
         public decimal GetResult(int questionIndex, int answerIndex)
         {
+            // Logging
+            using (var context = new LoggerContext())
+            {
+                var log = context.UserAnswerLogs.Where(q => q.QuestionNumber == questionIndex).FirstOrDefault();
+                if (log == null)
+                {
+                    log = new UserAnswerLog() { QuestionNumber = questionIndex, FirstAnswerCount = 0, SecondAnswerCount = 0, ThirdAnswerCount = 0, FourthAnswerCount = 0 };
+                    log = context.UserAnswerLogs.Add(log);
+                    context.SaveChanges();
+                }
+                if(answerIndex == 0)
+                {
+                    log.FirstAnswerCount++;
+                }
+                if (answerIndex == 1)
+                {
+                    log.SecondAnswerCount++;
+                }
+                if (answerIndex == 2)
+                {
+                    log.ThirdAnswerCount++;
+                }
+                if (answerIndex == 3)
+                {
+                    log.FourthAnswerCount++;
+                }
+                context.SaveChanges();
+            }
             using (var xmlReader = XmlReader.Create(_xmlUrl))
             {
                 var questions = new XmlQuestionRepository(xmlReader).GetAll();
@@ -48,15 +76,18 @@ namespace MillionaireGameWeb.BLL
                 {
                     if (questionIndex != questions.Count - 1)
                     {
+                        // Game still on
                         return -1;
                     }
                     else
                     {
+                        // Player wins
                         return questions[questionIndex].Price;
                     }
                 }
                 else
                 {
+                    // Calculating prize as first guaranteed question
                     return CalculateResult(questionIndex);
                 }
             }

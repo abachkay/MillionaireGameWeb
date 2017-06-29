@@ -70,13 +70,14 @@ namespace MillionaireGameWeb.UI.Controllers
         }
         public ActionResult CheckAnswer(int answerIndex)
         {
-            if (_gameManager.GetResult(Convert.ToInt32(Session["QuestionIndex"]), answerIndex) == -1)
+            var result = _gameManager.GetResult(Convert.ToInt32(Session["QuestionIndex"]), answerIndex);
+            if (result == -1)
             {
                 Session["QuestionIndex"] = Convert.ToInt32(Session["QuestionIndex"]) + 1;
             }
             else
             {
-                TempData["Result"] = _gameManager.GetResult(Convert.ToInt32(Session["QuestionIndex"]), answerIndex);
+                TempData["Result"] = result;
                 return RedirectToAction("Result");
             }
             return RedirectToAction("GetGameElements");

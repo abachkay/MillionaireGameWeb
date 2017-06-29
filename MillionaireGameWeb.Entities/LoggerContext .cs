@@ -14,6 +14,7 @@ namespace MillionaireGameWeb.Entities
         {
         }        
         public DbSet<ExceptionLog> ExceptionLogs { get; set; }
+        public DbSet<UserAnswerLog> UserAnswerLogs { get; set; }
     }
 
 }

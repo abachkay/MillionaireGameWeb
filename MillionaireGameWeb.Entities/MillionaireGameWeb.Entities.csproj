@@ -49,21 +49,22 @@
   <ItemGroup>
     <Compile Include="ExceptionLog.cs" />
     <Compile Include="LoggerContext .cs" />
-    <Compile Include="Migrations\201706290012384_Initial.cs" />
-    <Compile Include="Migrations\201706290012384_Initial.Designer.cs">
-      <DependentUpon>201706290012384_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\201706290022484_Initial.cs" />
+    <Compile Include="Migrations\201706290022484_Initial.Designer.cs">
+      <DependentUpon>201706290022484_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Question.cs" />
+    <Compile Include="UserAnswerLog.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201706290012384_Initial.resx">
-      <DependentUpon>201706290012384_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201706290022484_Initial.resx">
+      <DependentUpon>201706290022484_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
