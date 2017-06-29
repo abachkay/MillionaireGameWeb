@@ -1,0 +1,6 @@
+1. To set up database run Create.sql and Insert.sql from MillionaireGameWeb.SQL
+(Note: if you don't have SQLEXPRESS then change connection string in web.config to match yours)
+2. Run app from MillionaireGameWeb.UI
+3. To test error logging you can run app on localhost and try to send email without internet connection. 
+A new log should be added to table ExceptionLogs in database.
+If you try it in debug mode exception will be highlighted first, then it will show error page, without debugging - just error page.

@@ -118,23 +118,63 @@ namespace MillionaireGameWeb.BLL
         {          
             using (var xmlReader = XmlReader.Create(_xmlUrl))
             {
-                var result = new bool[4];
+                var result = new bool[4] { true, true, true, true };
                 var questions = new XmlQuestionRepository(xmlReader).GetAll();
                 var correctAnswerIndex = questions[questionIndex].Answers.ToList().IndexOf(questions[questionIndex].CorrectAnswer);
                 result[correctAnswerIndex] = false;
-                var rand = new Random();
-                int i1 = rand.Next(4), i2= rand.Next(4);
-                while (i1 == correctAnswerIndex)
+
+                using (var context = new LoggerContext())
                 {
-                    i1 = rand.Next(4);
+                    var log = context.UserAnswerLogs.Where(l => l.QuestionNumber == questionIndex).FirstOrDefault();
+                    if (log == null)
+                    {
+                        var rand = new Random();
+                        int i = rand.Next(4);
+                        while (i == correctAnswerIndex)
+                        {
+                            i = rand.Next(4);
+                        }
+                        result[i] = false;
+                    }
+                    else
+                    {
+                        var stats = new int[] { log.FirstAnswerCount, log.SecondAnswerCount, log.ThirdAnswerCount, log.FourthAnswerCount, };
+                        int indexOfMax = 0;
+                        int max = -1;
+                        for (int i = 0; i < 4; i++)
+                        {
+                            if (stats[i] >= max && i != correctAnswerIndex)
+                            {
+                                indexOfMax = i;
+                                max = stats[i];
+                            }
+                        }
+                        result[indexOfMax] = false;
+                    }
                 }
-                while (i2 == correctAnswerIndex || i2 == i1)
-                {
-                    i2 = rand.Next(4);
-                }
-                result[i1] = true;
-                result[i2] = true;
                 return result;
+            }
+        }
+
+        public int[] GetStats(int questionIndex)
+        {
+            using (var context = new LoggerContext())
+            {
+                var log = context.UserAnswerLogs.Where(l => l.QuestionNumber == questionIndex).FirstOrDefault();
+                if (log == null)
+                {
+                    return new int[] { 25,25,25,25 };
+                }
+                else
+                {
+                    var stats = new int[] { log.FirstAnswerCount, log.SecondAnswerCount, log.ThirdAnswerCount, log.FourthAnswerCount, };
+                    var sum = stats.Sum();
+                    for(int i=0;i<4;i++)
+                    {
+                        stats[i] = stats[i] * 100 / sum;
+                    }
+                    return stats;
+                }
             }
         }
 

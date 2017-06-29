@@ -55,15 +55,14 @@ function usePhone(to, description) {
     }    
 }
 
-function usePeople(description) {
-    var win = window.open('http://google.com?q=' + description, '_blank');
-    win.focus();
+function usePeople(description) {    
     $.ajax({
         type: "POST",
         url: '/Home/UsePeople',
         data: { description: description },
         success: function (result) {
             $('#GameContainer').html(result);
+            $('#modalStats').openModal();               
         },
     });      
 }

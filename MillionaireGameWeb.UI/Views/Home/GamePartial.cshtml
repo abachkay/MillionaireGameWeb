@@ -62,7 +62,7 @@
                 <div class="col s4 center">
                     @if (Session["PeopleUsed"] == null)
                     {
-                        
+
                         <button onclick="usePeople('@ViewBag.Description')" class="btn btn-large btn-floating indigo waves-effect waves-light" style="padding:5px"><img src="~/Content/Images/people.png" class="responsive-img"></button>
                     }
                     else
@@ -72,7 +72,7 @@
                 </div>                
             </div>
             <div class="collection">
-                @for ( int i=0;i< ViewBag.Prices.Count;i++)
+                @for (int i = 0; i < ViewBag.Prices.Count; i++)
                 {
                     if (ViewBag.QuestionIndex == i)
                     {
@@ -111,5 +111,17 @@
     </div>
     <div class="modal-footer">
         <button onclick="usePhone($('#email').val(),'@ViewBag.Description')" class="modal-action btn amber accent-4">Send</button>
+    </div>
+</div>
+<div id="modalStats" class="modal">
+    <div class="modal-content">
+        <h5>Statistics:</h5>
+        <p>A: @TempData["Statistic0"]%</p>
+        <p>B: @TempData["Statistic1"]%</p>
+        <p>C: @TempData["Statistic2"]%</p>
+        <p>D: @TempData["Statistic3"]%</p>        
+    </div>
+    <div class="modal-footer">
+        <button class="modal-action modal-close btn amber accent-4">Close</button>
     </div>
 </div>

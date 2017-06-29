@@ -1,17 +1,9 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
-using MillionaireGameWeb.Repositories;
-using System.Xml;
-using MillionaireGameWeb.Entities;
 using MillionaireGameWeb.BLL;
 using Ninject;
 using System.Reflection;
 using MillionaireGameWeb.UI.Filters;
-using log4net;
-using log4net.Repository.Hierarchy;
 
 namespace MillionaireGameWeb.UI.Controllers
 {    
@@ -107,6 +99,11 @@ namespace MillionaireGameWeb.UI.Controllers
         }
         public ActionResult UsePeople()
         {
+            var stats = _gameManager.GetStats(Convert.ToInt32(Session["QuestionIndex"]));
+            TempData["Statistic0"] = stats[0];
+            TempData["Statistic1"] = stats[1];
+            TempData["Statistic2"] = stats[2];
+            TempData["Statistic3"] = stats[3];
             Session["PeopleUsed"] = true;
             return RedirectToAction("GetGameElements");
         }

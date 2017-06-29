@@ -12,6 +12,7 @@ namespace MillionaireGameWeb.BLL
         decimal GetResult(int questionIndex, int answerIndex);
         IList<decimal> GetAllPrices();
         Question GetQuestion(int index);
+        int[] GetStats(int questionIndex);
         bool[] GetTwoAnswers(int questionIndex);
         void SendMessage(string to, string description);
     }
