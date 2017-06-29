@@ -106,3 +106,7 @@ C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.UI\bin\System.
 C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.UI\bin\System.Web.Mvc.xml
 C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.UI\bin\Ninject.dll
 C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.UI\bin\Ninject.xml
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.UI\bin\MillionaireGameWeb.Entities.dll.config
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.UI\bin\EntityFramework.xml
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.UI\bin\log4net.dll
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.UI\bin\log4net.xml

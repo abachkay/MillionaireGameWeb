@@ -3,3 +3,10 @@ C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\bin\D
 C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\obj\Debug\MillionaireGameWeb.Entities.dll
 C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\obj\Debug\MillionaireGameWeb.Entities.pdb
 C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\obj\Debug\MillionaireGameWeb.Entities.csprojResolveAssemblyReference.cache
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\bin\Debug\MillionaireGameWeb.Entities.dll.config
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\bin\Debug\EntityFramework.dll
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\bin\Debug\EntityFramework.xml
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\obj\Debug\MillionaireGameWeb.Entities.Migrations.Initial.resources
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Entities\obj\Debug\MillionaireGameWeb.Entities.csproj.GenerateResource.Cache

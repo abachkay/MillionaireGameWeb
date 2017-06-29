@@ -5,3 +5,6 @@ C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Repositories\b
 C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Repositories\bin\Debug\MillionaireGameWeb.Entities.pdb
 C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Repositories\obj\Debug\MillionaireGameWeb.Repositories.dll
 C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Repositories\obj\Debug\MillionaireGameWeb.Repositories.pdb
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Repositories\bin\Debug\EntityFramework.dll
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Repositories\bin\Debug\MillionaireGameWeb.Entities.dll.config
+C:\Users\abachkay\Documents\MillionaireGameWeb\MillionaireGameWeb.Repositories\bin\Debug\EntityFramework.xml

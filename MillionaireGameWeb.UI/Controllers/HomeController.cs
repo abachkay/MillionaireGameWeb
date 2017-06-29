@@ -9,17 +9,21 @@ using MillionaireGameWeb.Entities;
 using MillionaireGameWeb.BLL;
 using Ninject;
 using System.Reflection;
+using MillionaireGameWeb.UI.Filters;
+using log4net;
+using log4net.Repository.Hierarchy;
 
 namespace MillionaireGameWeb.UI.Controllers
-{       
+{    
+    [ExceptionLogger]
     public class HomeController : Controller
     {
-        private IMillionaireGameManager _gameManager;
+        private IMillionaireGameManager _gameManager;        
         public HomeController()
         {            
             var kernel = new StandardKernel();
             kernel.Load(Assembly.GetExecutingAssembly());
-            _gameManager = kernel.Get<IMillionaireGameManager>();
+            _gameManager = kernel.Get<IMillionaireGameManager>();            
         }
                 
         [HttpGet]
@@ -39,7 +43,7 @@ namespace MillionaireGameWeb.UI.Controllers
         }        
         [HttpPost]
         public ActionResult Login(string name)
-        {
+        {            
             Session["Name"] = name;
             Session["QuestionIndex"] = 0;
             Session["QuestionIndex"] = 0;
@@ -93,21 +97,12 @@ namespace MillionaireGameWeb.UI.Controllers
 
             Session["50/50Used"] = true;
             return RedirectToAction("GetGameElements");
-        }
+        }        
         public ActionResult UsePhone(string to, string description)
-        {
-            try
-            {
-                _gameManager.SendMessage(to, description);
-                Session["PhoneUsed"] = true;
-                return RedirectToAction("GetGameElements");
-            }
-            catch
-            {
-                ViewBag.ErrorCode = "404. Bad Request.";
-                ViewBag.ErrorMessage = "Connection problems or email is invalid.";
-                return PartialView("ErrorPartial");
-            }
+        {                    
+            _gameManager.SendMessage(to, description);
+            Session["PhoneUsed"] = true;
+            return RedirectToAction("GetGameElements");            
         }
         public ActionResult UsePeople()
         {
