@@ -38,8 +38,8 @@ function showModal()
 }
 
 function usePhone(to, description) {
-    var emailTemplate = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    if (emailTemplate.test($('#email').val())) {         
+    //var emailTemplate = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+    //if (emailTemplate.test($('#email').val())) {         
         $("#modalEmail").closeModal();
         $.ajax({
             type: "POST",
@@ -50,9 +50,9 @@ function usePhone(to, description) {
                 Materialize.toast('Done.', 4000)
             },
         });        
-    } else {
-        $('#emailError').text('Email is invalid.');
-    }    
+    //} else {
+    //    $('#emailError').text('Email is invalid.');
+    //}    
 }
 
 function usePeople(description) {    

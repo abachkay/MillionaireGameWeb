@@ -173,6 +173,10 @@ namespace MillionaireGameWeb.BLL
                     {
                         stats[i] = stats[i] * 100 / sum;
                     }
+                    if (stats.Sum() == 99)
+                    {
+                        stats[3]++;
+                    }
                     return stats;
                 }
             }

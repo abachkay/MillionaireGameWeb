@@ -11,7 +11,7 @@ namespace MillionaireGameWeb.UI.Filters
         {                  
             LogManager.GetLogger("LOGGER").Error(filterContext.Exception.Message);
             filterContext.ExceptionHandled = true;
-            if (filterContext.Exception is System.Net.Mail.SmtpException)
+            if (filterContext.Exception is System.Net.Mail.SmtpException || filterContext.Exception is FormatException)
             {
                 filterContext.Result = new RedirectResult("~/Content/EmailErrorPage.html");
             }

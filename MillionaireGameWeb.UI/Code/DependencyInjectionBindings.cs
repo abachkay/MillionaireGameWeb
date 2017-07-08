@@ -12,6 +12,7 @@ namespace MillionaireGameWeb.UI.Code
         public override void Load()
         {
             Bind<IMillionaireGameManager>().To<SimpleMillionaireGameManager>().WithConstructorArgument("xmlUrl", AppDomain.CurrentDomain.BaseDirectory + "App_Data/Data.xml");
+
         }
     }
 }
